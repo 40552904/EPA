@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		title H&S Login Page
+		link(rel='stylesheet', href='css/styles.css')
+	body.imagebackground
+		p.greetings Welcome to the Heart & Sole Fisheries Portal
+		block content
+			.main.container
+			.row
+			.col-md-6.greetings
+				h1=message
+				form(method='POST' action='/login').form-signin
+					div.form-group
+						//label(for='email') Email
+						input.form-control(type='text' id='username' placeholder='User Name' name='username')
+					div.form-group
+						//label(for='password') Password
+						input.form-control(type='password' id='password' placeholder='Password' name='password')
+					button.btn.btn-primary(type='submit') Log in 
